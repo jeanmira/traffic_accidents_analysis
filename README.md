@@ -73,6 +73,11 @@ This project performs a comprehensive analysis of traffic accidents in Minas Ger
 - `volume-trafego-praca-pedagio-2020.csv`: Contains traffic volume data from toll plazas in 2020.
 - `datatran2020.csv`: Contains reported traffic incident data in 2020.
 
+### Data Sources
+
+- [PRF Open Data](https://www.gov.br/prf/pt-br/acesso-a-informacao/dados-abertos/dados-abertos-da-prf)
+- [ANTT Open Data](https://dados.antt.gov.br/dataset/volume-trafego-praca-pedagio)
+
 ## Results
 
 The results of the analysis include:
