@@ -10,12 +10,6 @@ This project performs a comprehensive analysis of traffic accidents in Minas Ger
 ├── README.md
 ├── analysis
 │   ├── __init__.py
-│   ├── __pycache__
-│   │   ├── __init__.cpython-310.pyc
-│   │   ├── correlation_analysis.cpython-310.pyc
-│   │   ├── data_preprocessing.cpython-310.pyc
-│   │   ├── exploratory_analysis.cpython-310.pyc
-│   │   └── hotspot_analysis.cpython-310.pyc
 │   ├── correlation_analysis.py
 │   ├── data_preprocessing.py
 │   ├── exploratory_analysis.py
