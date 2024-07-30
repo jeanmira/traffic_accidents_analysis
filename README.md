@@ -21,8 +21,6 @@ This project performs a comprehensive analysis of traffic accidents in Minas Ger
 │   │   └── volume-trafego-praca-pedagio-2020-cleaned.csv
 │   └── volume-trafego-praca-pedagio-2020.csv
 ├── main.py
-├── notebooks
-│   └── analysis_notebook.ipynb
 └── requirements.txt
 ```
 
@@ -54,11 +52,6 @@ This project performs a comprehensive analysis of traffic accidents in Minas Ger
 1. Run the main script to preprocess data, perform exploratory analysis, correlation analysis, and hotspot analysis:
    ```bash
    python3 main.py
-   ```
-
-2. Open the Jupyter notebook for an interactive analysis:
-   ```bash
-   jupyter notebook notebooks/analysis_notebook.ipynb
    ```
 
 ## Scripts
