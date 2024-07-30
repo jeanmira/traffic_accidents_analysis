@@ -2,11 +2,15 @@
 # @Author: Jean Mira
 # @Date:   2024-07-30 15:20:35
 # @Last Modified by:   Jean Mira
-# @Last Modified time: 2024-07-30 16:15:56
+# @Last Modified time: 2024-07-30 16:22:44
 
 
 import pandas as pd
 import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Use seaborn color palette
+sns.set_palette("colorblind")
 
 
 def exploratory_analysis(cleaned_traffic_data_path, cleaned_accident_data_path):
@@ -34,8 +38,8 @@ def exploratory_analysis(cleaned_traffic_data_path, cleaned_accident_data_path):
         accident_data['data_inversa'].dt.to_period('M')).size()
 
     plt.figure(figsize=(12, 6))
-    monthly_accidents.plot(kind='bar', color='skyblue',
-                           edgecolor='black', label='Número de Acidentes')
+    monthly_accidents.plot(kind='bar', color=sns.color_palette("colorblind")[
+                           1], edgecolor='black', label='Número de Acidentes')
     plt.title('Número de Acidentes em MG (2020)')
     plt.xlabel('Mês')
     plt.ylabel('Número de Acidentes')
@@ -46,8 +50,8 @@ def exploratory_analysis(cleaned_traffic_data_path, cleaned_accident_data_path):
     weekday_accidents = accident_data['dia_semana'].value_counts().sort_index()
 
     plt.figure(figsize=(12, 6))
-    weekday_accidents.plot(kind='bar', color='lightgreen',
-                           edgecolor='black', label='Número de Acidentes')
+    weekday_accidents.plot(kind='bar', color=sns.color_palette("colorblind")[
+                           2], edgecolor='black', label='Número de Acidentes')
     plt.title('Número de Acidentes por Dia da Semana em MG (2020)')
     plt.xlabel('Dia da Semana')
     plt.ylabel('Número de Acidentes')
@@ -59,8 +63,8 @@ def exploratory_analysis(cleaned_traffic_data_path, cleaned_accident_data_path):
     causes_accidents = accident_data['causa_acidente'].value_counts().head(10)
 
     plt.figure(figsize=(12, 6))
-    causes_accidents.plot(kind='bar', color='salmon',
-                          edgecolor='black', label='Número de Acidentes')
+    causes_accidents.plot(kind='bar', color=sns.color_palette("colorblind")[
+                          3], edgecolor='black', label='Número de Acidentes')
     plt.title('Principais Causas de Acidentes em MG (2020)')
     plt.xlabel('Causa do Acidente')
     plt.ylabel('Número de Acidentes')
@@ -73,8 +77,8 @@ def exploratory_analysis(cleaned_traffic_data_path, cleaned_accident_data_path):
         'feridos_leves', 'feridos_graves', 'ilesos', 'mortos']].sum()
 
     plt.figure(figsize=(12, 6))
-    severity_accidents.plot(kind='bar', color='lightcoral',
-                            edgecolor='black', label='Número de Pessoas')
+    severity_accidents.plot(kind='bar', color=sns.color_palette("colorblind")[
+                            4], edgecolor='black', label='Número de Pessoas')
     plt.title('Severidade dos Acidentes em MG (2020)')
     plt.xlabel('Tipo de Severidade')
     plt.ylabel('Número de Pessoas')

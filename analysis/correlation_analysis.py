@@ -2,11 +2,15 @@
 # @Author: Jean Mira
 # @Date:   2024-07-30 15:20:35
 # @Last Modified by:   Jean Mira
-# @Last Modified time: 2024-07-30 16:17:32
+# @Last Modified time: 2024-07-30 16:21:42
 
 
 import pandas as pd
 import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Use seaborn color palette
+sns.set_palette("colorblind")
 
 
 def correlation_analysis(cleaned_traffic_data_path, cleaned_accident_data_path):
@@ -32,7 +36,7 @@ def correlation_analysis(cleaned_traffic_data_path, cleaned_accident_data_path):
 
     fig, ax1 = plt.subplots(figsize=(12, 6))
 
-    color = 'tab:blue'
+    color = sns.color_palette("colorblind")[0]
     ax1.set_xlabel('Mês')
     ax1.set_ylabel('Volume de Tráfego', color=color)
     ax1.plot(traffic_accidents_df.index.astype(
@@ -41,7 +45,7 @@ def correlation_analysis(cleaned_traffic_data_path, cleaned_accident_data_path):
     ax1.legend(loc='upper left')
 
     ax2 = ax1.twinx()
-    color = 'tab:red'
+    color = sns.color_palette("colorblind")[1]
     ax2.set_ylabel('Número de Acidentes', color=color)
     ax2.plot(traffic_accidents_df.index.astype(
         str), traffic_accidents_df['Numero_Acidentes'], color=color, marker='o', label='Número de Acidentes')
